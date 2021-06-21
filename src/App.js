@@ -1,10 +1,13 @@
 import logo from './logo.svg';
 import './App.css';
+import Options from './pages/entry/Options';
 import OrderSummary from './pages/summary/OrderSummary';
 
 function App() {
   return (
       <div className="App">
+          <Options optionType='scoops' />
+          <Options optionType='toppings' />
           <OrderSummary />
           {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
