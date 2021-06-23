@@ -4,7 +4,7 @@ import { pricePerItem } from '../constants'
 const OrderDetails = createContext();
 
 // create custom hook to check whether we're inside a provider
-export function userOrderDetails() {
+export function useOrderDetails() {
     // eslint-disable-next-line react-hooks/rules-of-hooks
     const context = useContext(OrderDetails);
 
