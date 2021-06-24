@@ -42,6 +42,9 @@ export default function Options({ optionType }) {
         <>
             <h2>{title}</h2>
             <p>{pricePerItem[optionType]} each</p>
+            <p>
+                {title} total: {orderDetails.totals[optionType]}
+            </p>
             <Row>
                 {optionItems}
             </Row>
