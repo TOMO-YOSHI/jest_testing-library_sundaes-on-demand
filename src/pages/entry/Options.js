@@ -35,7 +35,10 @@ export default function Options({ optionType }) {
             key={item.name} 
             name={item.name} 
             imagePath={item.imagePath}
-            updateItemCount={(itemName, newItemCount) => updateItemCount(itemName, newItemCount, optionType)}
+            updateItemCount={(itemName, newItemCount) => {
+                console.log(itemName, newItemCount, optionType);
+                updateItemCount(itemName, newItemCount, optionType)
+            }}
         />))
 
     return (

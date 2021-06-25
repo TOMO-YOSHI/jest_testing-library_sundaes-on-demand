@@ -20,5 +20,5 @@ test('update scoop subtotal when scoops change', async()=>{
     const chocolateInput = await screen.findByRole('spinbutton', { name: 'Chocolate' });
     userEvent.clear(chocolateInput);
     userEvent.type(chocolateInput, '2');
-    expect(scoopSubtotal).toHaveTextContent('4.00');
+    expect(scoopSubtotal).toHaveTextContent('6.00');
 });
