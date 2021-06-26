@@ -1,4 +1,5 @@
-import { findAllByAltText, render, screen } from '@testing-library/react';
+// import { findAllByAltText, render, screen } from '@testing-library/react';
+import { render, screen } from '../../../test-utils/testing-library-utils';
 
 import Options from '../Options';
 
