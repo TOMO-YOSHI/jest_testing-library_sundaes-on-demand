@@ -2,6 +2,7 @@
 import { render, screen } from '../../../test-utils/testing-library-utils';
 import userEvent from '@testing-library/user-event';
 import Options from '../Options';
+import OrderEntry from '../OrderEntry';
 // import { OrderDetailsProvider } from '../../../contexts/OrderDetails'
 
 test('update scoop subtotal when scoops change', async()=>{
@@ -55,7 +56,11 @@ test('update topping subtotal when toppings change', async() => {
 
 describe('grand total', ()=>{
     test('grand total starts at $0.00', ()=>{
+        render(<OrderEntry />);
 
+        const grandTotal = screen.getByText("Grand total: $", { exact: false });
+
+        expect(grandTotal).toHaveTextContent('0.00');
     });
     test('grand total updates properly if scoop is added first', ()=>{});
     test('grand total updates properly if toppings is added first', ()=>{});
