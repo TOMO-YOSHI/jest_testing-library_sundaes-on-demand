@@ -9,12 +9,10 @@ export default function OrderConfirmation({ setOrderPhase }) {
     const [error, setError] = useState(false);
 
     useEffect(()=>{
-        axios.post({
-            method: 'POST',
-            url:`http://localhost:3030/order`
-        })
+        axios.post(`http://localhost:3030/order`)
         .then(response => setOrderNumber(response.data.orderNumber))
         .catch(error => setError(true))
+        
     }, [])
 
     function handleClick() {
